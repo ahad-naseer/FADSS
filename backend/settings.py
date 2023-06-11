@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     "corsheaders",
+    'storages',
 ]
 
 
@@ -224,3 +225,16 @@ MEDIA_URL = '/media/'
 
 
 LOGIN_URL = '/'
+
+
+AWS_ACCESS_KEY_ID = "AKIAXG76I64JAQBVE26W"
+
+AWS_SECRET_ACCESS_KEY = "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"
+
+AWS_STORAGE_BUCKET_NAME = "fadss"
+
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
